@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(81, 81, 248);">
+    <div id="app"></div>
+    <div id="app2"></div>
+    <div id="app3"></div>
+    <div id="app4"></div>
+    <script>
+        const products = [
+            {title: 'Buger', price: 121 },
+            {title: 'Pizza', price: 20 },
+        ];
+        const app = document.getElementById('app');
+        products.forEach(product => {
+            app.innerHTML += `<li>${product.title} - ${product.price}</li>`;
+        })
+    </script>
+    <script>
+        const app2 = document.getElementById('app2');
+
+        const tasks = [
+            { title: 'make dinner', done: false },
+            { title: 'sweep the floor', done: true },
+            { title: 'feed the kittens', done: true },
+            { title: 'buy groceries', done: false },
+            { title: 'take a bath', done: true },
+        ];
+
+        tasks.forEach(({ title, done }) => {
+            const element = `
+                <li>
+                    <input 
+                            type='checkbox' 
+                            id='${title}' 
+                            name='${title}' 
+                            ${done && 'checked'} />
+                        <label for='${title}' >${title} </label>   
+                </li>`;
+        app2.insertAdjacentHTML('beforeend', element);});
+    </script>
+    <script>
+        const works = [
+            {title: 'Design logo', status: 'Complete'},
+            {title: 'Develop head', status: 'Incomplete'},
+            {title: 'Develop Main', status: 'Complete'},
+            {title: 'Develop Footer', status: 'Incomplete'},
+        ];
+
+        const app3 = document.getElementById('app3');
+        works.forEach(work => {
+            app3.innerHTML += `<li >${work.title} - ${work.status} <input type="checkbox"> </li>`;
+        });
+    </script>
+
+    <script>//usaremos el metodo map
+        const products2 = [
+            {title: 'Buger', price: 121 },
+            {title: 'Pizza', price: 20 },
+        ];
+        const app4 = document.getElementById('app4');
+        products2.map(products2 => {
+            app4.innerHTML += `<li>${products2.title} - ${products2.price}</li>`;
+        })
+    </script>
+</body>
+</html>
