@@ -9,7 +9,7 @@ for (let index = 0; index < letters.length; index++) {
 console.log('original', letters);
 console.log('new', newArray);
 
-// como crear un array con el metodo map
+// como crear un array con el metodo map, el metodo map, mapea cada elemento de un array y lo copia a un arreglo nuevo, no modifica el arreglo original
 const letters2 = [ 'a', 'b', 'c' ];
 const newArray2 = letters2.map(item => item + '++');
 console.log('original', letters2);

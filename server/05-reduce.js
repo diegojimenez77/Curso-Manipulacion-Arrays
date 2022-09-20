@@ -19,3 +19,4 @@ console.log(rta);
 // y cambiando el valor inicial del acumulador
 const rta2 = totals.reduce((sum,item) => sum + item, 10);
 console.log(rta2);
+console.log(totals);
